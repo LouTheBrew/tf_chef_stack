@@ -305,4 +305,21 @@ resource "aws_route53_record" "delivery-build-private" {
   ttl     = "${var.r53_ttl}"
   records = ["${element(split(",", module.delivery-build-server.private_ips), count.index)}"]
 }
+#
+# Stack template
+#
+resource "template_file" "stack" {
+  template = "${file("${path.module}/files/stack.tpl")}"
+  vars {
+    chef_c      = "${module.chef-server.credentials}"
+    analytics   = "${module.analytics-server.fqdn}"
+    compliance  = "${module.compliance-server.fqdn}"
+    delivery    = "${module.delivery-server.fqdn}"
+    delivery_c  = "${module.delivery-server.credentials_file}"
+    delivery_b  = "${module.delivery-build-server.fqdns}"
+    delivery_e  = "${var.ds_enterprise}"
+    ghe_c       = "${module.ghe-server.credentials}"
+    supermarket = "${module.supermarket-server.fqdn}"
+  }
+}
 
