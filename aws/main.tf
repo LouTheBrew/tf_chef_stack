@@ -4,7 +4,6 @@
 module "chef-server" {
   source = "github.com/mengesb/tf_chef_server"
   aws_access_key = "${var.aws_access_key}"
-  aws_flavor = "${var.cs_flavor}"
   aws_key_name = "${var.aws_key_name}"
   aws_private_key_file = "${var.aws_private_key_file}"
   aws_region = "${var.aws_region}"
@@ -49,7 +48,6 @@ resource "aws_route53_record" "chef-server-private" {
 module "analytics-server" {
   source = "github.com/mengesb/tf_chef_analytics"
   aws_access_key = "${var.aws_access_key}"
-  aws_flavor = "${var.as_flavor}"
   aws_key_name = "${var.aws_key_name}"
   aws_private_key_file = "${var.aws_private_key_file}"
   aws_region = "${var.aws_region}"
@@ -94,7 +92,6 @@ resource "aws_route53_record" "analytics-server-private" {
 module "compliance-server" {
   source = "github.com/mengesb/tf_chef_compliance"
   aws_access_key = "${var.aws_access_key}"
-  aws_flavor = "${var.cmp_flavor}"
   aws_key_name = "${var.aws_key_name}"
   aws_private_key_file = "${var.aws_private_key_file}"
   aws_region = "${var.aws_region}"
@@ -138,7 +135,6 @@ resource "aws_route53_record" "compliance-server-private" {
 module "ghe-server" {
   source = "github.com/mengesb/tf_ghe_server"
   aws_access_key = "${var.aws_access_key}"
-  aws_flavor = "${var.cs_flavor}"
   aws_key_name = "${var.aws_key_name}"
   aws_private_key_file = "${var.aws_private_key_file}"
   aws_region = "${var.aws_region}"
@@ -182,7 +178,6 @@ resource "aws_route53_record" "ghe-server-private" {
 module "supermarket-server" {
   source = "github.com/mengesb/tf_chef_supermarket"
   aws_access_key = "${var.aws_access_key}"
-  aws_flavor = "${var.ss_flavor}"
   aws_key_name = "${var.aws_key_name}"
   aws_private_key_file = "${var.aws_private_key_file}"
   aws_region = "${var.aws_region}"
@@ -225,7 +220,6 @@ resource "aws_route53_record" "supermarket-server-private" {
 module "delivery-server" {
   source = "github.com/mengesb/tf_chef_delivery"
   aws_access_key = "${var.aws_access_key}"
-  aws_flavor = "${var.ds_flavor}"
   aws_key_name = "${var.aws_key_name}"
   aws_private_key_file = "${var.aws_private_key_file}"
   aws_region = "${var.aws_region}"
@@ -271,7 +265,6 @@ resource "aws_route53_record" "delivery-server-private" {
 module "delivery-build-server" {
   source = "github.com/mengesb/tf_chef_delivery_build"
   aws_access_key = "${var.aws_access_key}"
-  aws_flavor = "${var.dbs_flavor}"
   aws_key_name = "${var.aws_key_name}"
   aws_private_key_file = "${var.aws_private_key_file}"
   aws_region = "${var.aws_region}"
