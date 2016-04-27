@@ -1,0 +1,68 @@
+# Terraform Variables File
+# AWS settings
+aws_access_key       = ""
+aws_key_name         = ""
+aws_private_key_file = ""
+aws_region           = ""
+aws_secret_key       = ""
+aws_subnet_id        = ""
+aws_vpc_id           = ""
+#
+# AMI settings
+#
+ami_os               = "centos6"
+#
+# specific settings
+#
+allowed_cidrs        = "10.0.0.0/8,192.168.0.0/16,172.16.0.0/12"
+client_version       = "12.8.1"
+domain               = ""
+log_to_file          = "true"
+r53_extid            = ""
+r53_intid            = ""
+r53_ttl              = 180
+ssl_cert             = ""
+ssl_key              = ""
+tag_description      = "Created using tf_chef_stack"
+#
+# tf_chef_server settings
+#
+cs_hostname          = "chef"
+cs_orgs              = ""
+cs_orgl              = ""
+cs_userna            = ""
+cs_userem            = ""
+cs_userfn            = ""
+cs_userln            = ""
+#
+# tf_ghe_server
+#
+ghe_hostname         = "github"
+ghe_license          = ""
+ghe_settings         = ""
+ghe_version          = ""
+#
+# tf_chef_analytics
+#
+as_hostname          = "analytics"
+#
+# tf_chef_supermarket
+#
+ss_hostname          = "supermarket"
+#
+# tf_chef_compliance
+#
+cmp_hostname         = "compliance"
+cmp_license          = "1"
+#
+# tf_chef_delivery
+#
+ds_enterprise        = ""
+ds_hostname          = "delivery"
+ds_license           = ""
+#
+# tf_chef_delivery_build
+#
+dbs_basename         = "dbuild"
+dbs_count            = 5
+
