@@ -3,7 +3,11 @@ Terraform plans for deploying a full Chef stack.
 
 ## Usage
 
-This repo is a gathering of various providers in sub-directories consuming the individually developed module Terraform plans by [Brian Menges](https://github.com/mengesb).
+Unless listed here, each sub-directory should contain a `README.md` describing that provider's usage
+
+### AWS Plan Usage
+
+This is a gathering of various individually developed module Terraform plans by [Brian Menges](https://github.com/mengesb).
 
 The following Terraform modules deploy their respective software title, referred to collectively as "the stack"
 
@@ -15,11 +19,23 @@ The following Terraform modules deploy their respective software title, referred
 * Chef Delivery Build - [tf_chef_delivery_build](https://github.com/mengesb/tf_chef_delivery_build)
 * GitHub Enterprise   - [tf_ghe_server](https://github.com/mengesb/tf_ghe_server)
 
+Since this is a full stack plan, please note that configurables reside in the children repositories. Provided in [aws](aws) is an [example terraform.tfvars](aws/terraform.tfvars.example)
+giving you the minimum amount of configuration required. There are of course other overrides that are available on a per-module basis; please consider making your own plan or using the
+specific module to your more specific needs.
+
+To use this plan
+1. `cp terraform.tfvars.example terraform.tfvars`
+2. Modify it as you see fit with your preferred editor
+3. `terraform get` to download required sub-modules
+4. `terraform plan` to see what it will build
+5. `terraform apply` to initiate the plan
+6. `terraform output` to see the stack output
+
 ## Plan Requirements
 
-Below in each sub-directory you'll find the plan requirements.
+Unless listed here, each sub-directory should contain a `README.md` describing that provider's requirements.
 
-### AWS Provider
+### AWS Plan Requirements
 
 This plan requires the following:
 

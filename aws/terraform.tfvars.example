@@ -14,6 +14,7 @@ ami_os               = "centos6"
 #
 # specific settings
 #
+accept_mlsa          = "true"
 allowed_cidrs        = "10.0.0.0/8,192.168.0.0/16,172.16.0.0/12"
 client_version       = "12.8.1"
 domain               = ""
@@ -53,7 +54,6 @@ ss_hostname          = "supermarket"
 # tf_chef_compliance
 #
 cmp_hostname         = "compliance"
-cmp_license          = "1"
 #
 # tf_chef_delivery
 #
