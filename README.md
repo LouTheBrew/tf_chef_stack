@@ -23,13 +23,13 @@ Since this is a full stack plan, please note that configurables reside in the ch
 giving you the minimum amount of configuration required. There are of course other overrides that are available on a per-module basis; please consider making your own plan or using the
 specific module to your more specific needs.
 
-To use this plan
-1. `cp terraform.tfvars.example terraform.tfvars`
+To use this plan:
+1. Make your local variables file: `cp terraform.tfvars.example terraform.tfvars`
 2. Modify it as you see fit with your preferred editor
-3. `terraform get` to download required sub-modules
-4. `terraform plan` to see what it will build
-5. `terraform apply` to initiate the plan
-6. `terraform output` to see the stack output
+3. Get dependencies: `terraform get`
+4. Test the plan: `terraform plan`
+5. Execute the plan: `terraform apply`
+6. (Optional) Review plan output: `terraform output`
 
 ## Plan Requirements
 
